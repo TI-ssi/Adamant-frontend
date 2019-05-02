@@ -1,0 +1,51 @@
+.sidebar {
+  background-color: $white;
+  padding: 2rem;
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    z-index: -1;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: $white;
+    right: -100vw;
+    position: absolute;
+  }
+  a {
+    color: inherit;
+  }
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  .widget {
+    margin-bottom: 2rem;
+    &.opening-hour {
+      p {
+        margin: 0;
+      }
+      .open-tag {
+        font-weight: 400;
+        &.open {
+          color: map-get($foundation-palette, primary);
+        }
+        &.closing {
+          color: #ffb12b;
+        }
+        &.closed {
+          color: #c61a11;
+        }
+      }
+    }
+  }
+  .sub-title-alt {
+    border-bottom: 2px solid map-get($foundation-palette, primary);
+    padding-bottom: 0.5rem;
+  }
+}

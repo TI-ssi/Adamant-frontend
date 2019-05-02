@@ -1,0 +1,107 @@
+.split-module {
+  position: relative;
+  &.convince {
+    .background-image {
+      background-image: url(../img/bg-convince.jpg);
+      background-position: center 56%;
+      background-size: cover;
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 0;
+      &:before {
+        background-color: $light-gray2;
+        content: "";
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+      }
+    }
+    @include breakpoint(medium down) {
+    }
+  }
+}
+
+.testimonials {
+  color: $white;
+  position: relative;
+  z-index: 1;
+  @include breakpoint(medium down) {
+    background-color: map-get($foundation-palette, secondary);
+  }
+  &.l-vspacing-medium {
+    @include breakpoint(medium down) {
+      padding-top: 7rem;
+    }
+  }
+  blockquote {
+    position: relative;
+    &:before {
+      color: $white;
+      content: "“";
+      display: inline-block;
+      font-size: 6rem;
+      left: -0.9rem;
+      line-height: 6rem;
+      position: absolute;
+      top: -3.5rem;
+    }
+    p {
+      color: $white;
+      font-size: 1.5rem;
+      margin-bottom: 2.3rem;
+      &:before {
+        background-color: $white;
+        content: "";
+        bottom: 2.45rem;
+        display: block;
+        height: 3px;
+        position: absolute;
+        width: 4rem;
+      }
+    }
+  }
+  cite {
+    color: $white;
+    font-size: 0.9rem;
+    font-style: normal;
+  }
+}
+
+.why-choose-us {
+  position: relative;
+  z-index: 1;
+  @include breakpoint(medium down) {
+    background-color: $light-gray2;
+    text-align: center;
+  }
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  li {
+    margin-bottom: 2rem;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+  .icon {
+    fill: map-get($foundation-palette, secondary);
+    height: 5rem;
+    float: left;
+    padding-right: 1rem;
+    width: 5rem;
+    @include breakpoint(medium down) {
+      float: none;
+      padding: 0;
+    }
+  }
+}

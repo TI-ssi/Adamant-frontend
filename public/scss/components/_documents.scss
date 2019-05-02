@@ -1,0 +1,73 @@
+.documents-how {
+  .steps {
+    list-style: none;
+    margin: 0;
+    li {
+      @extend .clearfix;
+      margin-bottom: 2rem;
+      @include breakpoint(small down) {
+        text-align: center;
+      }
+    }
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+    svg {
+      float: left;
+      height: 5rem;
+      width: 5rem;
+      @include breakpoint(medium down) {
+        height: 4rem;
+        width: 4rem;
+      }
+      @include breakpoint(small down) {
+        float: none;
+      }
+    }
+    .text {
+      margin-left: 7rem;
+      @include breakpoint(small down) {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.documents-steps {
+  @extend .clearfix;
+  background-color: $white;
+  margin: 1rem 0 3rem 0;
+  padding: 2rem;
+  svg {
+    float: left;
+    height: 10rem;
+    width: 10rem;
+    @include breakpoint(medium down) {
+      height: 7rem;
+      width: 7rem;
+    }
+    @include breakpoint(50em down) {
+      display: none;
+    }
+  }
+  .steps {
+    float: left;
+    font-size: 1.6rem;
+    list-style: none;
+    margin: 0 0 0 2rem;
+    @include breakpoint(medium down) {
+      font-size: 1.2rem;
+    }
+    @include breakpoint(50em down) {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    li {
+      @include breakpoint(50em down) {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

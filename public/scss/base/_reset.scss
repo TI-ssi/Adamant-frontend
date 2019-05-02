@@ -1,0 +1,11 @@
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+*:focus {
+  outline: none;
+}

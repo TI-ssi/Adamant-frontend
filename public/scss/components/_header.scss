@@ -1,0 +1,116 @@
+.alt-menu {
+  background-color: $dark-gray2;
+  color: $white;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  a {
+    color: $white;
+  }
+  .contact-information {
+    float: left;
+  }
+  .icon {
+    height: 1.4rem;
+    fill: $white;
+    left: 0;
+    position: absolute;
+    width: 1.4rem;
+  }
+  .icon-positioning {
+    padding-left: 2rem;
+    position: relative;
+    .icon-label {
+      @include breakpoint(medium down) {
+        display: none;
+      }
+    }
+  }
+  .menu {
+    float: right;
+  }
+}
+
+.header {
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  &.is-scrolled {
+    .main-menu {
+      @include transform(translateY(-39px));
+    }
+  }
+  .logo {
+    @include transition(all 0.3s ease-in-out);
+    display: inline-block;
+    opacity: 1;
+    width: 12rem;
+    @include breakpoint(medium down) {
+      width: 10rem;
+    }
+    @include breakpoint(small down) {
+      width: 8rem;
+    }
+  }
+}
+
+.overlay-opened {
+  .header {
+    .main-menu {
+      @include transform(translateY(0));
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+      .logo {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.main-menu {
+  @include transition(all 0.3s ease-in-out);
+  background-color: $white;
+  nav[role="navigation"] {
+    float: right;
+    padding: 1rem 0;
+    @include breakpoint(medium down) {
+      display: none;
+    }
+    a {
+      &:not(.button){
+        color: $dark-gray;
+        display: block;
+        &.active {
+          color: map-get($foundation-palette, primary);
+          position: relative;
+          &:before {
+            background-color: map-get($foundation-palette, primary);
+            bottom: -2px;
+            content: "";
+            display: block;
+            height: 2px;
+            position: absolute;
+            width: 100%;
+          }
+        }
+        &:hover {
+          color: map-get($foundation-palette, primary);
+        }
+      }
+      &.button {
+        font-size: 1rem;
+        margin: 0;
+        padding-bottom: 0.85em;
+        padding-top: 0.85em;
+      }
+    }
+  }
+  .l-positioning {
+    @include breakpoint(medium down) {
+      height: 4.95rem;
+    }
+    @include breakpoint(small down) {
+      height: 4.1rem;
+    }
+  }
+}

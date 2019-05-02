@@ -1,0 +1,28 @@
+.callout {
+  background-color: $medium-gray;
+  border: 1px solid $dark-gray;
+  margin: 0 0 2rem 0;
+  padding: 1rem;
+  position: relative;
+  &.icon {
+    padding-left: 4rem;
+    svg {
+      left: 1.1rem;
+      height: 2rem;
+      position: absolute;
+      top: 1.45rem;
+      width: 2rem;
+    }
+  }
+  &.message {
+    background-color: map-get($foundation-palette, noticeLight);
+    border-color: map-get($foundation-palette, notice);
+    p {
+      color: map-get($foundation-palette, notice);
+    }
+  }
+  p {
+    font-size: 1rem;
+    margin: 0;
+  }
+}

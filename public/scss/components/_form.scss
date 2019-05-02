@@ -1,0 +1,257 @@
+form {
+  [data-toggle-element] {
+    display: none;
+  }
+  [type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+    height: auto;
+    margin: 0 0 1rem 0;
+    padding: 0.8rem;
+    + .input-notice {
+      position: relative;
+      top: -2.05rem;
+    }
+    &.with-notice {
+      border-color: map-get($foundation-palette, notice);
+    }
+  }
+  input:disabled, input:read-only, select:disabled {
+    background-color: #e9e9e9;
+    color: #929292;
+    &:focus {
+      background-color: #e9e9e9;
+      border-color: $medium-gray;
+      color: #929292;
+    }
+  }
+  select {
+    background-position: right 0rem center;
+    height: auto;
+    padding: 0.8rem;
+    &:focus {
+      border: 1px solid $medium-gray2;
+    }
+  }
+  fieldset {
+    margin: 0 0 2rem 0;
+  }
+  label, .label {
+    margin-bottom: 0.3rem;
+    a {
+      color: map-get($foundation-palette, primary);
+      text-decoration: underline;
+    }
+    &.label-link {
+      a {
+        color: map-get($foundation-palette, notice);
+        float: right;
+        text-decoration: underline;
+      }
+    }
+  }
+  textarea {
+    min-height: 14rem;
+  }
+  .checkbox {
+    input[type="checkbox"] {
+      display: none;
+      &:hover {
+        .box {
+          svg {
+            opacity: 0.3;
+          }
+        }
+      }
+      &:checked {
+        + label {
+          .box {
+            svg {
+              opacity: 1 !important;
+            }
+          }
+        }
+      }
+      + label {
+        margin: 0;
+        padding-left: 2rem;
+        position: relative;
+        &:hover {
+          .box {
+            svg {
+              opacity: 0.3;
+            }
+          }
+        }
+        .box {
+          background-color: $white;
+          border: 1px solid $medium-gray;
+          display: inline-block;
+          height: 1.3rem;
+          left: 0;
+          position: absolute;
+          top: 0.2rem;
+          width: 1.3rem;
+          svg {
+            @include transition(all 0.1s ease-in-out);
+            fill: $medium-gray2;
+            height: 0.8rem;
+            left: 0.22rem;
+            opacity: 0;
+            position: absolute;
+            top: 0.2rem;
+            width: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+  .error-field {
+    label, .label {
+      color: map-get($foundation-palette, alert);
+    }
+    .error {
+      color: map-get($foundation-palette, alert);
+      position: relative;
+      top: -1.7rem;
+    }
+    .input-notice {
+      background: map-get($foundation-palette, alertLight);
+      border-color: map-get($foundation-palette, alert);
+      p {
+        color: map-get($foundation-palette, alert);
+      }
+    }
+    .radio {
+      label {
+        color: $dark-gray;
+      }
+    }
+    .with-error {
+      border-color: map-get($foundation-palette, alert);
+    }
+  }
+  .input-notice {
+    background-color: map-get($foundation-palette, noticeLight);
+    border: 1px solid map-get($foundation-palette, notice);
+    margin: 0;
+    padding: 1rem;
+    p {
+      color: map-get($foundation-palette, notice);
+      font-size: 1rem;
+      margin: 0;
+    }
+  }
+  .signature {
+    margin-top: 2rem;
+  }
+  .radio {
+    input[type="radio"] {
+      display: none;
+      &:checked {
+        + label {
+          svg {
+            filter: grayscale(0);
+            opacity: 1;
+          }
+        }
+      }
+    }
+    label {
+      font-weight: 300;
+      margin: 0 0 2em 0;
+      position: relative;
+      &:hover {
+        svg {
+          opacity: 0.7;
+        }
+      }
+      &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+      }
+      span {
+        display: inline-block;
+        margin-left: 0.5rem;
+        vertical-align: middle;
+      }
+      svg {
+        @include transition(all 0.3s ease-in-out);
+        display: inline-block;
+        filter: grayscale(100%);
+        height: 3.2rem;
+        opacity: 0.5;
+        vertical-align: middle;
+        width: 3.2rem;
+      }
+    }
+  }
+}
+.frame {
+  background-color: $white;
+  border: 1px solid $medium-gray;
+  padding: 2rem;
+  p {
+    font-size: 1rem;
+  }
+}
+.form-steps {
+  margin-bottom: 2rem;
+  li {
+    float: left;
+    width: 20%;
+    @include breakpoint(small down) {
+      text-align: center;
+    }
+  }
+  strong {
+    display: block;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+  .detailed {
+    @include breakpoint(small down) {
+      display: none;
+    }
+  }
+  .detailed-information {
+    @include breakpoint(73em down) {
+      display: none;
+    }
+  }
+  .step {
+    border-top: 2px solid $medium-gray;
+    color: $medium-gray;
+    padding-top: 0.5rem;
+    position: relative;
+    &:before {
+      background-color: $light-gray;
+      content: "";
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: -2px;
+      width: 5px;
+    }
+    &.is-active {
+      border-color: $dark-gray;
+      color: $dark-gray;
+      a {
+        color: $dark-gray;
+      }
+    }
+    &.is-completed {
+      border-color: map-get($foundation-palette, primary);
+      color: map-get($foundation-palette, primary);
+      a {
+        color: map-get($foundation-palette, primary);
+      }
+    }
+    a {
+      color: $medium-gray;
+      display: block;
+    }
+  }
+}

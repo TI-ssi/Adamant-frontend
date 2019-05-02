@@ -1,0 +1,19 @@
+.check {
+  box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.06);
+  margin: 0 0 2rem 0;
+  position: relative;
+  .mask {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    img {
+      @include transition(all 0.3s ease-in-out);
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+}
