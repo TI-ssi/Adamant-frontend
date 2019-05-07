@@ -8,6 +8,7 @@ return [
     'menu' => [
         'home' => 'Accueil',
         'dashboard' => 'Dashboard',
+        'change_lang' => 'En'
     ],
 
     'back' => "Back",

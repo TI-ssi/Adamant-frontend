@@ -15,6 +15,7 @@
                  @else
                    <li><a href="/login" role="menuitem" class="button primary">{{ __('general.login')  }}</a></li>
                  @endif
+                 <li><a href="/{{ (app()->getLocale() == 'en' ? 'fr' : 'en' ) }}" role="menuitem" id="lang">{{ __('general.menu.change_lang')  }}</a></li>
               </ul>
             </nav>
 	        <button class="menu-toggle align-items-center" data-toggle="menu-mobile" aria-controls="menu-mobile" aria-haspopup="true" tabindex="0">
@@ -37,6 +38,7 @@
           @else
             <li><a href="/login" role="menuitem" class="button primary">{{ __('general.login')  }}</a></li>
           @endif
+          <li><a href="/{{ (app()->getLocale() == 'en' ? 'fr' : 'en' ) }}" role="menuitem" id="lang">{{ __('general.menu.change_lang')  }}</a></li>
         </ul>
       </nav>
     </div>

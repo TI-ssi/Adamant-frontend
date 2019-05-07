@@ -9,6 +9,7 @@ return [
         'home' => 'Home',
         'contact' => 'Join us',
         'dashboard' => 'Dashboard',
+        'change_lang' => 'Fr'
     ],
 
     'back' => "Back",
