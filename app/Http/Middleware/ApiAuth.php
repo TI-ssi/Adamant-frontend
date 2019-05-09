@@ -23,7 +23,7 @@ class ApiAuth
     public function handle($request, Closure $next)
     {
         try{
-            $user = collect($this->api->getAccess()->sendTo('/v1/AuthUser')['data']);
+            $user = collect($this->api->getAccess()->sendTo('v1/AuthUser')['data']);
             $user->put('roles', collect($user->get('roles')));
             
             $request->merge(['user' => $user ]);
