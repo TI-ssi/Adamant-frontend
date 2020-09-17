@@ -2,7 +2,8 @@
 
 namespace App\Exceptions;
 
-use Exception;
+//use Exception;
+use Throwable as Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use InvalidArgumentException;
 
