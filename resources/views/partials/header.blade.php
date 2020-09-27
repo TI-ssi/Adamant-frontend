@@ -1,11 +1,11 @@
-    <header class="header">
-      <div class="main-menu top-menu" >
+    <header class="row">
+      <div class="main-menu top-menu col-12" >
         <div class="flex-row flex-column">
           <div class="d-flex justify-content-lg-around justify-content-between">
             <a href="/" class="logo d-flex align-items-center">
                  <span>{{ __('general.title') }}</span>
 	        </a>
-            <nav role="navigation">
+            <nav role="navigation" class="d-none d-lg-inline">
               <ul class="menu l-listing">
                  @include('partials/menu-items')
                  @if(request()->user())
@@ -27,7 +27,7 @@
       </div>
     </header>
 
-    <div class="overlay-menu">
+    <div class="overlay-menu d-none">
       <nav class="l-valign">
         <ul class="menu">
           @include('partials/menu-items')

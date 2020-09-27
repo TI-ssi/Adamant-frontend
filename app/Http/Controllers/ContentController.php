@@ -29,7 +29,6 @@ class ContentController extends Controller
             $testApi = $e->getMessage();
         }
         
-        
         return view("pages/{$slug}", [
             'slug' => $slug,
             'test_api' => $testApi

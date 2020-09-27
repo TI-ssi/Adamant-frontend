@@ -1,11 +1,11 @@
-    <footer class="footer">
-      <div class="footer-menu">
-        <div class="d-flex large-9 medium-12 justify-content-center justify-content-lg-between mx-auto alt-menu">
+    <footer class="row">
+        <div class="col-6 d-none alt-menu">
           <ul class="menu">
               @include('partials/menu-items')
           </ul>
-
-          <ul class="contact-information text-lg-right">
+	</div>
+	<div class"col-12 col-lg-6 offset-lg-6">
+          <ul class="p-0 contact-information text-center text-lg-right">
             <li>&nbsp;</li>
             <li>&nbsp;</li>
             <li>&nbsp;</li>
@@ -14,6 +14,6 @@
           </ul>
 
         </div>
-      </div>
+
     </footer>
 
