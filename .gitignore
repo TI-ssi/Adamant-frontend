@@ -3,7 +3,7 @@
 /public/css
 /public/hot
 /public/storage
-/public/mix-mamifest.json
+/public/mix-manifest.json
 /storage/*.key
 /config
 /vendor

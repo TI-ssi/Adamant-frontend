@@ -1,10 +1,10 @@
     <footer class="row">
-        <div class="col-6 d-none alt-menu">
+        <div class="col-6 d-none d-lg-block alt-menu">
           <ul class="menu">
               @include('partials/menu-items')
           </ul>
 	</div>
-	<div class"col-12 col-lg-6 offset-lg-6">
+	<div class="col-12 col-lg-6">
           <ul class="p-0 contact-information text-center text-lg-right">
             <li>&nbsp;</li>
             <li>&nbsp;</li>

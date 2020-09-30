@@ -14,13 +14,14 @@
       
   </head>
 
-  <body>
+  <body id="vApp">
 
-    <div class="container-fluid">
+    <div class="container">
       @include('partials/header')
 
       @yield('body')
-
+    </div>
+    <div class="container-fluid">
       @include('partials/footer')
     </div>
     
