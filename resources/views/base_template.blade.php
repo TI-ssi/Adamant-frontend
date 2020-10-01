@@ -14,18 +14,23 @@
       
   </head>
 
-  <body id="vApp">
+  <body >
 
-    <div class="container">
-      @include('partials/header')
-
-      @yield('body')
-    </div>
-    <div class="container-fluid">
-      @include('partials/footer')
+    <div id="vApp">
+      <div class="container-fluid">
+	@include('partials/header')
+	</div>
+      <div class="container">
+	@yield('body')
+      </div>
+            <div class="container-fluid">
+	      @include('partials/footer')
+	      </div>
     </div>
     
     <script src="{{ asset('/js/app.js') }}"></script>
     <script src="{{ asset('/js/custom.js') }}"></script>
+
+      
   </body>
 </html>
