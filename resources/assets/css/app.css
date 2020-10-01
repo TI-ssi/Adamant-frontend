@@ -1,3 +1,7 @@
+form label{
+    font-weight:bold;
+}
+
 .contact-information .list-group-item{
     border:none;
     background: transparent;
