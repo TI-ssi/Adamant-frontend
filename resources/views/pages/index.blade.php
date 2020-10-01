@@ -6,7 +6,7 @@
 		<h3 class="text-center font-weight-bold">{!! __('general.home.welcome') !!}</h3>
 	    </div>
         </div>	    
-        <div class="row mt-4 bg-light-dark">
+        <div class="row mt-4 bg-light">
 	       <div class="col text-justify p-3 m-1">
 	           <div class="text-center"><h3>{{ __('general.home.hello_world') }}</h3></div>
 		   <hr>
