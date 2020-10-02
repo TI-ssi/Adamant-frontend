@@ -1,6 +1,9 @@
 /node_modules
+/public/js
+/public/css
 /public/hot
 /public/storage
+/public/mix-manifest.json
 /storage/*.key
 /config
 /vendor
@@ -12,8 +15,9 @@ npm-debug.log
 yarn-error.log
 .env
 composer.lock
+package-lock.json
 
-# Laravel 5 & Lumen specific
+# Laravel & Lumen specific
 .env.*.php
 .env.php
 .env

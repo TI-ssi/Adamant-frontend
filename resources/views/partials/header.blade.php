@@ -1,42 +1,28 @@
-    <header class="header">
-      <div class="main-menu top-menu" >
-        <div class="flex-row flex-column">
-          <div class="d-flex justify-content-lg-around justify-content-between">
-            <a href="/" class="logo d-flex align-items-center">
-                 <span>{{ __('general.title') }}</span>
-	        </a>
-            <nav role="navigation">
-              <ul class="menu l-listing">
-                 @include('partials/menu-items')
-                 @if(request()->user())
-                   <li><a href="/dashboard" role="menuitem" class="button primary">{{ __('general.menu.dashboard')  }}</a></li>
-                   <li><a href="/logout" role="menuitem">{{ __('general.logout')  }}</a></li>
+<div class="row">
+  <b-navbar class="col" toggleable="lg" type="dark" variant="dark">
+    <b-navbar-brand href="/">{{ __('general.title') }}</b-navbar-brand>
 
-                 @else
-                   <li><a href="/login" role="menuitem" class="button primary">{{ __('general.login')  }}</a></li>
-                 @endif
-              </ul>
-            </nav>
-	        <button class="menu-toggle align-items-center" data-toggle="menu-mobile" aria-controls="menu-mobile" aria-haspopup="true" tabindex="0">
-              <div class="menu-toggle-box">
-                <div class="menu-toggle-inner"></div>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-    <div class="overlay-menu">
-      <nav class="l-valign">
-        <ul class="menu">
-          @include('partials/menu-items')
-          @if(request()->user())
-            <li><a href="/dashboard" role="menuitem" class="button primary">{{ __('general.menu.dashboard')  }}</a></li>
-            <li><a href="/logout" role="menuitem">{{ __('general.logout')  }}</a></li>
-          @else
-            <li><a href="/login" role="menuitem" class="button primary">{{ __('general.login')  }}</a></li>
-          @endif
-        </ul>
-      </nav>
-    </div>
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav class="ml-auto">
+         @include('partials/menu-items')
+
+	 @if(request()->user())
+	     <b-nav-item-dropdown text="User">	 
+                   <b-dropdown-item href="/dashboard" role="menuitem" class="button primary">{{ __('general.menu.dashboard')  }}</b-dropdown-item>
+                   <b-dropdown-item href="/logout" role="menuitem">{{ __('general.logout')  }}</b-dropdown-item>
+	     </b-nav-item-dropdown>
+         @else
+             <b-nav-item href="/login" role="menuitem" class="button primary">{{ __('general.login')  }}</b-nav-item>
+         @endif
+
+
+        <b-nav-item-dropdown v-if="bilingual" text="Lang" right>
+          <b-dropdown-item href="/en">EN</b-dropdown-item>
+          <b-dropdown-item href="/fr">FR</b-dropdown-item>
+        </b-nav-item-dropdown>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
+</div>

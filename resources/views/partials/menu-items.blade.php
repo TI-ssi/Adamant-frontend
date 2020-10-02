@@ -1,8 +1,8 @@
-<li><a href="/" @if ($slug == 'index') class="active" @endif role="menuitem">{{ __('general.menu.home') }}</a></li>
-<li><a href="/contact" @if ($slug == 'contact') class="active" @endif role="menuitem">{{ __('general.menu.contact') }}</a></li>
+<b-nav-item href="/" @if ($slug == 'index') active @endif >{{ __('general.menu.home') }}</b-nav-item>
+<b-nav-item href="/contact" @if ($slug == 'contact') active @endif >{{ __('general.menu.contact') }}</b-nav-item>
 @if(request()->user())
    @if(request()->user()->get('roles')->contains('name', 'admin'))
-      <li><a href="{{ url('admin') }}">Admin</a></li>
+      <b-nav-item href="{{ url('admin') }}">Admin</b-nav-item>
    @endif               
 @endif
 
