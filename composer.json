@@ -1,6 +1,6 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
+    "name": "ti-ssi/adamant-frontend",
+    "description": "The Adamant CMS frontend based on Laravel.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
