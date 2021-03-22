@@ -22,9 +22,7 @@ class ApiWrapper
     protected $headers;
 
     public function __construct(){
-        $this->clientAccess['default'] = new Client(['base_uri' => config('api.default.baseUrl')]);
-        $this->clientAccess['plexPay'] = new Client(['base_uri' => config('api.plexPay.baseUrl')]);
-        $this->clientAccess['geth']    = new Client(['base_uri' => config('api.geth.baseUrl')]);
+    	foreach(config('api') as $key => $conf) $this->clientAccess[$key] = new Client(['base_uri' => config('api.'.$key.'.baseUrl')]);
 
         $this->requestId = 0;
         
@@ -124,7 +122,7 @@ class ApiWrapper
 
     private function refresh($apiName = 'default'){
         try{
-            if(!Session::has('crt')) throw new \Exception('CRT not found.');;
+            if(!Session::has('crt')) throw new \Exception('CRT not found.');
 
             $this->withData(array(
                 'client_id' => config('api.'.$apiName.'.clientToken'),
